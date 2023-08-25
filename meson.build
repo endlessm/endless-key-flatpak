@@ -21,11 +21,11 @@ kolibri_home_template_dir = get_option('kolibri_home_template_dir')
 build_profile = get_option('profile')
 
 if build_profile == 'default'
-    base_application_id = 'org.learningequality.Kolibri'
-    base_object_path = '/org/learningequality/Kolibri'
+    base_application_id = 'org.endlessos.Key'
+    base_object_path = '/org/endlessos/Key'
 elif build_profile == 'development'
-    base_application_id = 'org.learningequality.Kolibri.Devel'
-    base_object_path = '/org/learningequality/Kolibri/Devel'
+    base_application_id = 'org.endlessos.Key.Devel'
+    base_object_path = '/org/endlessos/Key/Devel'
 endif
 
 frontend_application_id = base_application_id

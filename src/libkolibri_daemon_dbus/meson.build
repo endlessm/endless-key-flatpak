@@ -9,9 +9,9 @@ _c_config.set_quoted('DAEMON_OBJECT_PATH', daemon_object_path)
 _c_config.set_quoted('DAEMON_MAIN_OBJECT_PATH', daemon_main_object_path)
 _c_config.set_quoted('DAEMON_PRIVATE_OBJECT_PATH', daemon_private_object_path)
 if build_profile == 'development'
-    _c_config.set_quoted('PROFILE_ENV_PREFIX', 'KOLIBRI_DEVEL_')
+    _c_config.set_quoted('PROFILE_ENV_PREFIX', 'ENDLESS_KEY_DEVEL_')
 else
-    _c_config.set_quoted('PROFILE_ENV_PREFIX', 'KOLIBRI_')
+    _c_config.set_quoted('PROFILE_ENV_PREFIX', 'ENDLESS_KEY_')
 endif
 
 _c_config_dep = declare_dependency(
