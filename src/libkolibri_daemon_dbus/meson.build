@@ -29,17 +29,22 @@ common_dependencies = [
     gobject_dep
 ]
 
+
 kolibri_daemon_dbus_src = gnome.gdbus_codegen(
     'kolibri-daemon-dbus',
-    sources: 'org.learningequality.Kolibri.Daemon.xml',
-    interface_prefix: 'org.learningequality.Kolibri.',
+    sources: configure_file(
+        input: 'org.learningequality.Kolibri.Daemon.xml.in',
+        output: '@0@.xml'.format(daemon_application_id),
+        configuration: kolibri_app_config
+    ),
+    interface_prefix: '@0@.'.format(base_application_id),
     namespace: 'Kolibri',
     # The public interface should be "org.learningequality.Kolibri.Daemon.Main",
     # but at the moment it appears as "org.learningequality.Kolibri.Daemon" for
     # compatibility with eos-kolibri's included D-Bus policy:
     # <https://github.com/endlessm/eos-kolibri>
     annotations: [
-        ['org.learningequality.Kolibri.Daemon', 'org.gtk.GDBus.C.Name', 'DaemonMain']
+        ['@0@'.format(daemon_application_id), 'org.gtk.GDBus.C.Name', 'DaemonMain']
     ],
     autocleanup: 'all'
 )
