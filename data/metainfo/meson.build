@@ -2,8 +2,8 @@ metainfo_dir = join_paths(datadir, 'metainfo')
 
 metainfo_file = i18n.merge_file(
     input: configure_file(
-        input: 'org.learningequality.Kolibri.metainfo.xml.in.in',
-        output: 'org.learningequality.Kolibri.metainfo.xml.in',
+        input: 'org.endlessos.Key.metainfo.xml.in.in',
+        output: 'org.endlessos.Key.metainfo.xml.in',
         configuration: kolibri_app_config
     ),
     output: base_application_id + '.metainfo.xml',
