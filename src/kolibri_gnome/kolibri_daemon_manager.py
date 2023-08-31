@@ -155,10 +155,9 @@ class KolibriDaemonManager(GObject.GObject):
         soup_session = Soup.Session.new()
         soup_message = Soup.Message.new(method, url)
         if request_body is not None:
-            soup_message.set_request(
+            soup_message.set_request_body_from_bytes(
                 "application/json",
-                Soup.MemoryUse.COPY,
-                self.__request_body_object_to_bytes(request_body),
+                GLib.Bytes(self.__request_body_object_to_bytes(request_body)),
             )
         soup_session.send_async(
             soup_message,
@@ -182,9 +181,7 @@ class KolibriDaemonManager(GObject.GObject):
         if soup_message.get_status() >= Soup.Status.BAD_REQUEST:
             # FIXME: It would be better to raise an exception, and
             # handle it in the other side to set SESSION_STATUS_ERROR.
-            logger.warning(
-                f"Error calling Kolibri API, code: {soup_message.status_code}"
-            )
+            logger.warning(f"Error calling Kolibri API: {soup_message.get_status()}")
             result_cb(None)
             return
 
@@ -218,7 +215,6 @@ class KolibriDaemonManager(GObject.GObject):
                 "Error initializing Kolibri daemon proxy: {error}".format(error=error)
             )
             self.props.has_error = True
-            self.__on_dbus_proxy_changed()
         else:
             self.__dbus_proxy_on_notify_g_name_owner(self.__dbus_proxy)
 
