@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Terminal=false
-Name=Kolibri Launcher
+Name=Endless Key Launcher
 Exec=@KOLIBRI_APP_LIBEXECDIR@/kolibri-gnome-launcher %U
 NoDisplay=true
 StartupNotify=false
