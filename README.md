@@ -1,6 +1,6 @@
-# kolibri-installer-gnome
+# endless-key-flatpak
 
-Kolibri desktop front-end for GNOME.
+Endless Key app for GNOME.
 
 ### Requirements
 
@@ -77,7 +77,7 @@ able to develop any module.
    button. Once the export has successfully completed, Builder will
    open a file browser window showing the export directory, with the
    flatpak bundle already selected. Note that this file is named
-   *org.learningequality.Kolibri.Devel.flatpak*, the ".Devel" allows
+   *org.endlessos.Key.Devel.flatpak*, the ".Devel" allows
    parallel installation with the production flatpak.
 
 4. Double-click the icon of the flatpak bundle file in order to
@@ -88,7 +88,7 @@ able to develop any module.
 5. Now you are ready to develop. For running the front-end, just click
    on the play button at the top bar. For running any other module,
    you can change the command in the
-   `build-aux/flatpak/org.learningequality.Kolibri.Devel.json` flatpak
+   `build-aux/flatpak/org.endlessos.Key.Devel.json` flatpak
    manifest file. Example: `{"command":
    "/app/libexec/kolibri-app/kolibri-gnome-search-provider"}`.
 
