@@ -28,7 +28,7 @@ logger = logging.getLogger(__name__)
 class Application(Adw.Application):
     __context: KolibriContext
 
-    application_name = GObject.Property(type=str, default=_("Kolibri"))
+    application_name = GObject.Property(type=str, default=_("Endless Key"))
 
     def __init__(self, *args, context: KolibriContext = None, **kwargs):
         super().__init__(*args, flags=Gio.ApplicationFlags.HANDLES_OPEN, **kwargs)
@@ -112,9 +112,9 @@ class Application(Adw.Application):
         about_window = Adw.AboutWindow(
             transient_for=self.get_active_window(),
             modal=True,
-            application_name=_("Kolibri"),
+            application_name=_("Endless Key"),
             application_icon=BASE_APPLICATION_ID,
-            copyright=_("© 2022 Learning Equality"),
+            copyright=_("© 2023 Endless OS Foundation"),
             version=_("{kolibri_version} ({app_version})").format(
                 app_version=PROJECT_VERSION,
                 kolibri_version=self.__context.kolibri_version,
