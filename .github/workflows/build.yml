@@ -37,9 +37,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Flatpak bundle
-        uses: flatpak/flatpak-github-actions/flatpak-builder@v6.1
+        uses: flatpak/flatpak-github-actions/flatpak-builder@c14f6d4af8f66d453ff76be890a6127716606c13
         with:
           bundle: org.endlessos.Key.Devel.flatpak
           manifest-path: build-aux/flatpak/org.endlessos.Key.Devel.json
-          cache: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
           cache-key: endless-key-${{ github.sha }}
