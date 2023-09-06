@@ -3,10 +3,12 @@ Type=Application
 Terminal=false
 Name=Endless Key
 Comment=Offline education technology platform
+Comment[es_ES]=Plataforma tecnológica educativa desconectada
 # TRANSLATORS: These are search terms to find this application.
 #              Terms MUST be separated by semicolons.
 #              This list must end with a semicolon.
 Keywords=education;multimedia;videos;learning;quiz;
+Keywords[es_ES]=educación;multimedia;vídeos;aprendizaje;cuestionario;
 Categories=Education;
 Exec=kolibri-gnome %U
 StartupNotify=true
