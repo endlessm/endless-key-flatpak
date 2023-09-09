@@ -1,0 +1,22 @@
+{
+    "name": "python3-kolibri-explore-plugin",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} kolibri-explore-plugin",
+        "mkdir -p \"${FLATPAK_DEST}/share/endless-key\"",
+        "cp -R apps-bundle -t \"${FLATPAK_DEST}/share/endless-key\""
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/09/12/fb14d5c278a2247610e077ab95437969c3650215f97053945288e9eae0b6/kolibri_explore_plugin-6.43.0-py3-none-any.whl",
+            "sha256": "0c55ef45d9100d43323c12733e58e7d3871f3e3828194ad6a003f8a64468a702"
+        },
+        {
+            "type": "archive",
+            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v6.43.0/apps-bundle.zip",
+            "sha256": "0b0a7b417e1fbd07b9326a744bf41a12f5b3d29bfbe0cc3b9a96f22dbcdca63a",
+            "dest": "apps-bundle"
+        }
+    ]
+}
