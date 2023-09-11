@@ -22,6 +22,7 @@ logger = logging.getLogger(__name__)
 # These Kolibri plugins must be enabled for the application to function:
 REQUIRED_PLUGINS = [
     "kolibri.plugins.app",
+    "kolibri_explore_plugin",
 ]
 
 # These Kolibri plugins will be automatically enabled if they are available:
@@ -29,8 +30,11 @@ OPTIONAL_PLUGINS = [
     "kolibri_app_desktop_xdg_plugin",
     "kolibri_desktop_auth_plugin",
     "kolibri_dynamic_collections_plugin",
-    "kolibri_explore_plugin",
     "kolibri_zim_plugin",
+]
+
+DISABLED_PLUGINS = [
+    "kolibri.plugins.learn",
 ]
 
 # TODO: Automatically enable plugins from flatpak plugin extensions.
@@ -42,6 +46,9 @@ def init_kolibri(**kwargs):
     _init_kolibri_env()
 
     from kolibri.utils.main import initialize
+
+    for plugin_name in DISABLED_PLUGINS:
+        _disable_kolibri_plugin(plugin_name)
 
     for plugin_name in REQUIRED_PLUGINS:
         _enable_kolibri_plugin(plugin_name)
@@ -82,6 +89,17 @@ def _enable_kolibri_plugin(plugin_name: str, optional=False) -> bool:
     if plugin_name not in plugins_config.ACTIVE_PLUGINS:
         logger.info(f"Enabling plugin {plugin_name}")
         enable_plugin(plugin_name)
+
+    return True
+
+
+def _disable_kolibri_plugin(plugin_name: str, optional=False) -> bool:
+    from kolibri.plugins import config as plugins_config
+    from kolibri.plugins.utils import disable_plugin
+
+    if plugin_name in plugins_config.ACTIVE_PLUGINS:
+        logger.info(f"Disabling plugin {plugin_name}")
+        disable_plugin(plugin_name)
 
     return True
 
