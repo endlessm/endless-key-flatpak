@@ -1,0 +1,22 @@
+{
+    "name" : "AppStream",
+    "buildsystem" : "meson",
+    "config-opts" : [
+        "-Dstemming=false",
+        "-Dsystemd=false",
+        "-Dgir=false",
+        "-Dapidocs=false",
+        "-Dinstall-docs=false"
+    ],
+    "cleanup" : [
+        "*"
+    ],
+    "sources" : [
+        {
+            "type": "archive",
+            "url": "https://freedesktop.org/software/appstream/releases/AppStream-0.16.3.tar.xz",
+            "sha256": "081c917646e94d7221c9e4aae54dacda95a27c607fa93cd8e6344a2b318b98b1",
+            "strip-components": 2
+        }
+    ]
+}
