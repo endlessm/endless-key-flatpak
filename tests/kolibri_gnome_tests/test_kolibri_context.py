@@ -109,14 +109,14 @@ class TestKolibriChannelContext(KolibriContextTestCase):
             self.kolibri_context.parse_kolibri_url_tuple(
                 urlsplit("kolibri:?search=addition")
             ),
-            f"{LEARN_PATH_PREFIX}topics/t/{self.CHANNEL_ID}/search?keywords=addition",
+            f"{LEARN_PATH_PREFIX}topics/{self.CHANNEL_ID}/search?keywords=addition",
         )
 
         self.assert_kolibri_path_equal(
             self.kolibri_context.parse_kolibri_url_tuple(
                 urlsplit("kolibri:?search=addition+and+subtraction")
             ),
-            f"{LEARN_PATH_PREFIX}topics/t/{self.CHANNEL_ID}/search?keywords=addition+and+subtraction",
+            f"{LEARN_PATH_PREFIX}topics/{self.CHANNEL_ID}/search?keywords=addition+and+subtraction",
         )
 
 

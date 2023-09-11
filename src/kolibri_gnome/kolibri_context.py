@@ -24,12 +24,12 @@ from .utils import map_properties
 
 logger = logging.getLogger(__name__)
 
-LEARN_PATH_PREFIX = "/learn/#/"
+LEARN_PATH_PREFIX = "/explore/#/"
 
 STATIC_PATHS_RE = r"^(app|static|downloadcontent|content\/storage|content\/static|content\/zipcontent)\/?"
-SYSTEM_PATHS_RE = r"^(?P<lang>[\w\-]+\/)?(user|logout|redirectuser|learn\/app)\/?"
+SYSTEM_PATHS_RE = r"^(?P<lang>[\w\-]+\/)?(user|logout|redirectuser|explore\/app)\/?"
 AUTH_PLUGIN_PATHS_RE = r"^(?P<lang>[\w\-]+\/)?kolibri_desktop_auth_plugin\/?"
-CONTENT_PATHS_RE = r"^(?P<lang>[\w\-]+\/)?learn\/?"
+CONTENT_PATHS_RE = r"^(?P<lang>[\w\-]+\/)?explore\/?"
 
 
 class KolibriContext(GObject.GObject):
@@ -100,7 +100,7 @@ class KolibriContext(GObject.GObject):
 
     @property
     def default_url(self) -> str:
-        return "x-kolibri-app:/"
+        return "x-kolibri-app:/explore"
 
     @property
     def webkit_web_context(self) -> WebKit.WebContext:
