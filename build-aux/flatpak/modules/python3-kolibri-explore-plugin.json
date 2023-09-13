@@ -9,13 +9,13 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/09/12/fb14d5c278a2247610e077ab95437969c3650215f97053945288e9eae0b6/kolibri_explore_plugin-6.43.0-py3-none-any.whl",
-            "sha256": "0c55ef45d9100d43323c12733e58e7d3871f3e3828194ad6a003f8a64468a702"
+            "url": "https://files.pythonhosted.org/packages/35/11/227fcddccd55122c2d56c2771ecf6db5c8b117660ec3268e22435301e4b5/kolibri_explore_plugin-6.46.0-py3-none-any.whl",
+            "sha256": "2f276dbed17e9b916ea39fe05279b09d75d6227d1ef03df8668b18b5df396a62"
         },
         {
             "type": "archive",
-            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v6.43.0/apps-bundle.zip",
-            "sha256": "0b0a7b417e1fbd07b9326a744bf41a12f5b3d29bfbe0cc3b9a96f22dbcdca63a",
+            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v6.46.0/apps-bundle.zip",
+            "sha256": "3d753e1f7d3a0b835241bb909d06be2a9e8132d269996948916833eab82f61ea",
             "dest": "apps-bundle"
         }
     ]
