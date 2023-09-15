@@ -65,7 +65,7 @@ kolibri_home_dir(void)
   g_autofree gchar *kolibri_home = expanduser(g_getenv("KOLIBRI_HOME"));
 
   if (kolibri_home == NULL || kolibri_home[0] == '\0')
-    return g_build_path("/", g_get_home_dir(), ".kolibri", NULL);
+    return g_build_path("/", g_get_user_data_dir(), "kolibri", NULL);
 
   return g_steal_pointer(&kolibri_home);
 }
