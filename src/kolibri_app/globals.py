@@ -24,13 +24,22 @@ APP_DISABLE_AUTOMATIC_PROVISION = os.environ.get(
 
 XDG_CURRENT_DESKTOP = os.environ.get("XDG_CURRENT_DESKTOP")
 
-# Logic for KOLIBRI_HOME is from kolibri.utils.conf. We avoid importing it from
-# Kolibri because the import comes with side-effects.
-DEFAULT_KOLIBRI_HOME_PATH = Path.home().joinpath(".kolibri")
+# Logic for KOLIBRI_HOME that mimics kolibri.utils.conf except that
+# $XDG_DATA_HOME/kolibri is used rather than ~/.kolibri so that the home
+# directory doesn't need to be exposed in the flatpak.
+if "XDG_DATA_HOME" in os.environ:
+    XDG_DATA_HOME = Path(os.environ["XDG_DATA_HOME"]).expanduser().absolute()
+else:
+    XDG_DATA_HOME = Path.home().joinpath(".local/share")
+DEFAULT_KOLIBRI_HOME_PATH = XDG_DATA_HOME.joinpath("kolibri")
 if "KOLIBRI_HOME" in os.environ:
     KOLIBRI_HOME_PATH = Path(os.environ["KOLIBRI_HOME"]).expanduser().absolute()
 else:
     KOLIBRI_HOME_PATH = DEFAULT_KOLIBRI_HOME_PATH
+
+    # Set KOLIBRI_HOME now so that kolibri's initialization doesn't set
+    # it back to ~/.kolibri.
+    os.environ["KOLIBRI_HOME"] = KOLIBRI_HOME_PATH.as_posix()
 
 
 def init_gettext():
