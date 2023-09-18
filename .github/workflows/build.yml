@@ -43,3 +43,31 @@ jobs:
           manifest-path: build-aux/flatpak/org.endlessos.Key.Devel.json
           cache: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
           cache-key: endless-key-${{ github.sha }}
+
+      - name: Install dbus-daemon environment and run it
+        run: |
+          # Need dbus-daemon to run flatpak app later
+          # https://discussion.fedoraproject.org/t/cannot-run-flatpaks-in-a-fedora-container/73867/2
+          dnf install -y dbus-daemon
+          mkdir /run/dbus
+          dbus-daemon --system
+
+      - name: Install org.flatpak.Builder for the consistent appstream-util
+        run: |
+          flatpak install flathub org.flatpak.Builder -y
+
+      # We use appstreamcli, rather than appstream-util [1] to validate the
+      # metainfo to fix the validation error [2]. However, Flathub still use the
+      # flatpak org.flatpak.Builder's appstream-util from Flathub to validate
+      # the metainfo. To avoid the validation error on Flathub, like the caption
+      # length issue [3], use the consistent appstream-util for the validation.
+      # [1]: https://github.com/endlessm/endless-key-flatpak/pull/33
+      # [2]: https://github.com/endlessm/endless-key-flatpak/issues/34
+      # [3]: https://github.com/endlessm/endless-key-flatpak/issues/66
+      - name: Validate metainfo
+        run: |
+          flatpak run \
+            --env=G_DEBUG=fatal-criticals \
+            --command=appstream-util \
+            org.flatpak.Builder \
+            validate flatpak_app/files/share/appdata/org.endlessos.Key.Devel.appdata.xml
