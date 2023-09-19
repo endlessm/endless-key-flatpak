@@ -9,6 +9,7 @@ import tempfile
 from gettext import gettext as _
 from pathlib import Path
 
+from kolibri_app.config import ENDLESS_KEY_DATA_DIR
 from kolibri_app.globals import APP_DISABLE_AUTOMATIC_PROVISION
 
 from .content_extensions_manager import ContentExtensionsManager
@@ -63,6 +64,14 @@ def _init_kolibri_env():
     # application to be used in a single user environment with a limited
     # workload, we can use a smaller number of threads.
     os.environ.setdefault("KOLIBRI_CHERRYPY_THREAD_POOL", "10")
+
+    os.environ.setdefault(
+        "KOLIBRI_APPS_BUNDLE_PATH", Path(ENDLESS_KEY_DATA_DIR, "apps-bundle").as_posix()
+    )
+    os.environ.setdefault(
+        "KOLIBRI_CONTENT_COLLECTIONS_PATH",
+        Path(ENDLESS_KEY_DATA_DIR, "collections").as_posix(),
+    )
 
     content_extensions_manager = ContentExtensionsManager()
     content_extensions_manager.apply(os.environ)

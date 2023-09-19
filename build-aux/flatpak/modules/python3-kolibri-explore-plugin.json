@@ -4,7 +4,7 @@
     "build-commands": [
         "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} kolibri-explore-plugin",
         "mkdir -p \"${FLATPAK_DEST}/share/endless-key\"",
-        "cp -R apps-bundle -t \"${FLATPAK_DEST}/share/endless-key\""
+        "cp -R apps-bundle -t \"${ENDLESS_KEY_DATA_DIR}\"",
     ],
     "sources": [
         {
