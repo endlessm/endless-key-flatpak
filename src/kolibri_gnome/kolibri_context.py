@@ -13,13 +13,12 @@ from gi.repository import Gio
 from gi.repository import GLib
 from gi.repository import GObject
 from gi.repository import WebKit
+from kolibri_app.config import ENDLESS_KEY_DATA_DIR
 from kolibri_app.config import FRONTEND_APPLICATION_ID
-from kolibri_app.config import KOLIBRI_DATA_DIR
 
 from .kolibri_daemon_manager import KolibriDaemonManager
 from .utils import await_properties
 from .utils import bubble_signal
-from .utils import get_localized_file
 from .utils import map_properties
 
 logger = logging.getLogger(__name__)
@@ -70,10 +69,7 @@ class KolibriContext(GObject.GObject):
             cookies_filename.as_posix(), WebKit.CookiePersistentStorage.SQLITE
         )
 
-        loader_path = get_localized_file(
-            Path(KOLIBRI_DATA_DIR, "assets", "_load-{}.html").as_posix(),
-            Path(KOLIBRI_DATA_DIR, "assets", "_load.html"),
-        )
+        loader_path = Path(ENDLESS_KEY_DATA_DIR, "loading-screen", "index.html")
         self.__loader_url = loader_path.as_uri()
 
         self.__webkit_web_context = WebKit.WebContext()
@@ -150,7 +146,14 @@ class KolibriContext(GObject.GObject):
         return self.default_is_url_in_scope(url)
 
     def get_loader_url(self, state: str) -> str:
-        return self.__loader_url + "#" + state
+        if state == "error":
+            return f"{self.__loader_url}#/loading/error"
+        if state == "initial":
+            return f"{self.__loader_url}#/loading/initial"
+        if state == "retry":
+            return f"{self.__loader_url}#/loading/retry"
+        else:
+            return f"{self.__loader_url}#/loading/default"
 
     def parse_kolibri_url_tuple(self, url_tuple: SplitResult) -> str:
         """

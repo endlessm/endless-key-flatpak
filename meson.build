@@ -46,7 +46,6 @@ search_provider_object_path = base_object_path + '/SearchProvider'
 po_dir = join_paths(meson.project_source_root(), 'po')
 
 kolibri_app_libexecdir = join_paths(libexecdir, 'kolibri-app')
-kolibri_app_data_dir = join_paths(datadir, 'kolibri-app')
 endless_key_data_dir = join_paths(datadir, 'endless-key')
 
 kolibri_app_config = configuration_data()
@@ -59,7 +58,6 @@ kolibri_app_config.set('LOCALE_DIR', locale_dir)
 kolibri_app_config.set('BUILD_PROFILE', build_profile)
 kolibri_app_config.set('PROFILE_ENV_PREFIX', profile_env_prefix)
 kolibri_app_config.set('KOLIBRI_APP_LIBEXECDIR', kolibri_app_libexecdir)
-kolibri_app_config.set('KOLIBRI_APP_DATA_DIR', kolibri_app_data_dir)
 kolibri_app_config.set('ENDLESS_KEY_DATA_DIR', endless_key_data_dir)
 kolibri_app_config.set('BASE_APPLICATION_ID', base_application_id)
 kolibri_app_config.set('BASE_OBJECT_PATH', base_object_path)
