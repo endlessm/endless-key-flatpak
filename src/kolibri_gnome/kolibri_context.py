@@ -13,8 +13,8 @@ from gi.repository import Gio
 from gi.repository import GLib
 from gi.repository import GObject
 from gi.repository import WebKit
-from kolibri_app.config import DATA_DIR
 from kolibri_app.config import FRONTEND_APPLICATION_ID
+from kolibri_app.config import KOLIBRI_DATA_DIR
 
 from .kolibri_daemon_manager import KolibriDaemonManager
 from .utils import await_properties
@@ -71,8 +71,8 @@ class KolibriContext(GObject.GObject):
         )
 
         loader_path = get_localized_file(
-            Path(DATA_DIR, "assets", "_load-{}.html").as_posix(),
-            Path(DATA_DIR, "assets", "_load.html"),
+            Path(KOLIBRI_DATA_DIR, "assets", "_load-{}.html").as_posix(),
+            Path(KOLIBRI_DATA_DIR, "assets", "_load.html"),
         )
         self.__loader_url = loader_path.as_uri()
 
