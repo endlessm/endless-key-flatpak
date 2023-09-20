@@ -1,6 +1,6 @@
 project('kolibri-gnome', ['c'],
     meson_version: '>= 0.56.0',
-    version: '0.1'
+    version: run_command('cat', 'VERSION').stdout().strip()
 )
 
 package_string = '@0@-@1@'.format(meson.project_name(), meson.project_version())
