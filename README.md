@@ -129,6 +129,12 @@ them into kolibri-gnome arguments. Starts kolibri-gnome with a
 specific application ID depending on the URI. This is why a launcher
 process is needed instead of handling these URIs in kolibri-gnome.
 
+#### Debugging
+
+When running the flatpak, you can define `ENDLESS_KEY_APP_DEVELOPER_EXTRAS=1`
+in your environment to enable web developer tools (such as the
+‘Inspect Element’ context menu item).
+
 #### Creating releases
 
 Before creating a release, be sure you update [org.endlessos.Key.metainfo.xml.in.in](data/metainfo/org.endlessos.Key.metainfo.xml.in.in)
