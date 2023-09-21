@@ -222,7 +222,7 @@ class Application(Adw.Application):
             return
         response_file = file_chooser.get_file()
         download.set_allow_overwrite(True)
-        download.set_destination(response_file.get_uri())
+        download.set_destination(response_file.get_path())
 
     def __download_on_finished(self, download: WebKit.Download):
         download_destination = download.get_destination()
@@ -230,7 +230,7 @@ class Application(Adw.Application):
         if not download_destination:
             return
 
-        download_file = Gio.File.new_for_uri(download_destination)
+        download_file = Gio.File.new_for_path(download_destination)
 
         file_launcher = Gtk.FileLauncher.new(download_file)
         file_launcher.open_containing_folder(None, None, None)
