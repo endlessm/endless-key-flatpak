@@ -10,8 +10,15 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/f4/5c/b1be759285bfa4abd410d727a0f82752d96ef164a6bac14e2af60965ee3e/kolibri_explore_plugin-7.3.0-py3-none-any.whl",
-            "sha256": "b9a188c2037597a53cd369c94876f665fd7a37abfa7e44c9ff40ae3942853eba"
+            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.3.0/kolibri_explore_plugin-7.3.0-py3-none-any.whl",
+            "sha256": "b9a188c2037597a53cd369c94876f665fd7a37abfa7e44c9ff40ae3942853eba",
+            "x-checker-data": {
+                "type": "json",
+                "url": "https://api.github.com/repos/endlessm/kolibri-explore-plugin/releases/latest",
+                "version-query": ".tag_name | sub(\"^[vV]\"; \"\")",
+                "url-query": ".assets[] | select(.name==\"kolibri_explore_plugin-\" + $version + \"-py3-none-any.whl\") | .browser_download_url",
+                "versions": {"<": "8.0.0"}
+            }
         },
         {
             "type": "archive",
