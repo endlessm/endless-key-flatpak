@@ -10,7 +10,7 @@ from gettext import gettext as _
 from pathlib import Path
 
 from kolibri_app.config import ENDLESS_KEY_DATA_DIR
-from kolibri_app.globals import APP_DISABLE_AUTOMATIC_PROVISION
+from kolibri_app.globals import APP_AUTOMATIC_PROVISION
 
 from .content_extensions_manager import ContentExtensionsManager
 
@@ -53,7 +53,7 @@ def init_kolibri(**kwargs):
 
     initialize(**kwargs)
 
-    if not APP_DISABLE_AUTOMATIC_PROVISION:
+    if APP_AUTOMATIC_PROVISION:
         _kolibri_automatic_provision()
 
 
