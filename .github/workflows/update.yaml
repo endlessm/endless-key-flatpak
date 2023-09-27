@@ -27,12 +27,4 @@ jobs:
           EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # The f-e-d-c safe.directory handling is currently broken when
-          # the manifest is in a subdirectory.
-          #
-          # https://github.com/flathub/flatpak-external-data-checker/issues/386
-          entrypoint: /bin/bash
-          args: >-
-            -c 'git config --global --add safe.directory "$PWD" &&
-            /app/flatpak-external-data-checker --update --verbose --never-fork
-            build-aux/flatpak/org.endlessos.Key.Devel.json'
+          args: --update --verbose --never-fork build-aux/flatpak/org.endlessos.Key.Devel.json
