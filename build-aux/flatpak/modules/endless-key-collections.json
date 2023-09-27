@@ -10,7 +10,13 @@
             "type": "archive",
             "url": "https://github.com/endlessm/endless-key-collections/releases/download/v0.3.1/collections.zip",
             "sha256": "1c1a298a07b3ed340dcb88cb414ef8d6b07a34ce1fcec5d0c6a3e472db551681",
-            "dest": "collections"
+            "dest": "collections",
+            "x-checker-data": {
+                "type": "json",
+                "url": "https://api.github.com/repos/endlessm/endless-key-collections/releases/latest",
+                "version-query": ".tag_name",
+                "url-query": ".assets[] | select(.name==\"collections.zip\") | .browser_download_url"
+            }
         }
     ]
 }

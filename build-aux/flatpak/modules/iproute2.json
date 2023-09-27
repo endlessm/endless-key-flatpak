@@ -8,9 +8,13 @@
     ],
     "sources" : [
         {
-            "type" : "archive",
-            "url" : "https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-5.7.0.tar.xz",
-            "sha256" : "725dc7ba94aae54c6f8d4223ca055d9fb4fe89d6994b1c03bfb4411c4dd10f21"
+            "type" : "git",
+            "url" : "https://git.kernel.org/pub/scm/network/iproute2/iproute2.git",
+            "tag" : "v5.7.0",
+            "x-checker-data" : {
+                "type" : "git",
+                "tag-pattern" : "^v([\\d.]+)$"
+            }
         }
     ]
 }
