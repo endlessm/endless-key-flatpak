@@ -10,33 +10,37 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.3.0/kolibri_explore_plugin-7.3.0-py3-none-any.whl",
-            "sha256": "b9a188c2037597a53cd369c94876f665fd7a37abfa7e44c9ff40ae3942853eba",
+            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.4.0/kolibri_explore_plugin-7.4.0-py3-none-any.whl",
+            "sha256": "3ae7a7f6a4cffceef3aa867490287f07604beb39e1261b7db6dffff20c8e7476",
             "x-checker-data": {
                 "type": "json",
                 "url": "https://api.github.com/repos/endlessm/kolibri-explore-plugin/releases/latest",
                 "version-query": ".tag_name | sub(\"^[vV]\"; \"\")",
                 "url-query": ".assets[] | select(.name==\"kolibri_explore_plugin-\" + $version + \"-py3-none-any.whl\") | .browser_download_url",
-                "versions": {"<": "8.0.0"}
+                "versions": {
+                    "<": "8.0.0"
+                }
             }
         },
         {
             "type": "archive",
-            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.3.0/apps-bundle.zip",
-            "sha256": "04fa5e3d4ccd0d8ef4ae0fe48aaa2727d755be91ed97365f953d995f0d5d1d6f",
+            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.4.0/apps-bundle.zip",
+            "sha256": "c97d29df06223c02e602f905d94aa9c4ef208638e5dd2a3cf20b23474294f93d",
             "dest": "apps-bundle",
             "x-checker-data": {
                 "type": "json",
                 "url": "https://api.github.com/repos/endlessm/kolibri-explore-plugin/releases/latest",
                 "version-query": ".tag_name | sub(\"^[vV]\"; \"\")",
                 "url-query": ".assets[] | select(.name==\"apps-bundle.zip\") | .browser_download_url",
-                "versions": {"<": "8.0.0"}
+                "versions": {
+                    "<": "8.0.0"
+                }
             }
         },
         {
             "type": "archive",
-            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.3.0/loading-screen.zip",
-            "sha256": "8c3043de75715225ab2594c70435979c04205d078c33bc91969ac5bd489cce45",
+            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.4.0/loading-screen.zip",
+            "sha256": "99614881b909606f0a66c6c304d6d685d985a56086f1d4452ab98cae1f6b8294",
             "strip-components": 0,
             "dest": "loading-screen",
             "x-checker-data": {
@@ -44,7 +48,9 @@
                 "url": "https://api.github.com/repos/endlessm/kolibri-explore-plugin/releases/latest",
                 "version-query": ".tag_name | sub(\"^[vV]\"; \"\")",
                 "url-query": ".assets[] | select(.name==\"loading-screen.zip\") | .browser_download_url",
-                "versions": {"<": "8.0.0"}
+                "versions": {
+                    "<": "8.0.0"
+                }
             }
         }
     ]
