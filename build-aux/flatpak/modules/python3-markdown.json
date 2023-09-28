@@ -2,7 +2,7 @@
     "name": "python3-markdown",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install --ignore-installed --no-deps --no-index --no-build-isolation --find-links=\"file://${PWD}\" --target=\"${KOLIBRI_MODULE_PATH}/dist/\" markdown==3.3.7"
+        "pip3 install --ignore-installed --no-deps --no-index --no-build-isolation --find-links=\"file://${PWD}\" --target=\"${KOLIBRI_MODULE_PATH}/dist/\" markdown"
     ],
     "sources": [
         {
@@ -12,7 +12,8 @@
             "x-checker-data": {
                 "type": "pypi",
                 "name": "Markdown",
-                "packagetype": "bdist_wheel"
+                "packagetype": "bdist_wheel",
+                "versions": {"==": "3.3.7"}
             }
         }
     ]
