@@ -90,11 +90,13 @@ class Application(Adw.Application):
 
     def __on_open_documentation(self, action, *args):
         self.open_url_in_external_application(
-            "https://kolibri.readthedocs.io/en/latest/"
+            "https://support.endlessos.org/en/endless-key"
         )
 
     def __on_open_forums(self, action, *args):
-        self.open_url_in_external_application("https://community.learningequality.org/")
+        self.open_url_in_external_application(
+            "https://community.endlessos.com/c/endless-key"
+        )
 
     def __on_new_window(self, action, *args):
         self.open_kolibri_window()
@@ -111,9 +113,9 @@ class Application(Adw.Application):
                 kolibri_version=self.__context.kolibri_version,
             ),
             license_type=Gtk.License.MIT_X11,
-            website="https://learningequality.org",
-            issue_url="https://community.learningequality.org/",
-            support_url="https://kolibri.readthedocs.io/en/latest/",
+            website="https://www.endlessos.org/key",
+            issue_url="https://github.com/endlessm/endless-key-flatpak/issues",
+            support_url="https://support.endlessos.org/en/endless-key",
         )
         about_window.present()
 
