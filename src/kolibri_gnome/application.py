@@ -100,10 +100,7 @@ class Application(Adw.Application):
             application_name=_("Endless Key"),
             application_icon=BASE_APPLICATION_ID,
             copyright=_("© 2023 Endless OS Foundation"),
-            version=_("{kolibri_version} ({app_version})").format(
-                app_version=PROJECT_VERSION,
-                kolibri_version=self.__context.kolibri_version,
-            ),
+            version=PROJECT_VERSION,
             license_type=Gtk.License.MIT_X11,
             website="https://www.endlessos.org/key",
             issue_url="https://github.com/endlessm/endless-key-flatpak/issues",
