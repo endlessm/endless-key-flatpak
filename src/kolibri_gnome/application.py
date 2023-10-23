@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import logging
 import typing
 from functools import partial
@@ -107,11 +108,19 @@ class Application(Adw.Application):
             website="https://www.endlessos.org/key",
             issue_url="https://github.com/endlessm/endless-key-flatpak/issues",
             support_url="https://support.endlessos.org/en/endless-key",
+            debug_info=self.__format_debug_info(),
+            debug_info_filename="endless-key-debug-info.json",
         )
         about_window.add_link(
             _("Community Forums"), "https://community.endlessos.com/c/endless-key"
         )
         about_window.present()
+
+    def __format_debug_info(self):
+        return json.dumps(
+            self.__context.get_debug_info(),
+            indent=4,
+        )
 
     def __on_quit(self, action, *args):
         self.quit()
