@@ -14,8 +14,8 @@ from gi.repository import GObject
 from gi.repository import Gtk
 from gi.repository import WebKit
 from kolibri_app.config import BASE_APPLICATION_ID
-from kolibri_app.config import PROJECT_VERSION
 from kolibri_app.globals import XDG_CURRENT_DESKTOP
+from kolibri_app.utils import get_version_id
 
 from .kolibri_context import KolibriChannelContext
 from .kolibri_context import KolibriContext
@@ -100,7 +100,7 @@ class Application(Adw.Application):
             application_name=_("Endless Key"),
             application_icon=BASE_APPLICATION_ID,
             copyright=_("© 2023 Endless OS Foundation"),
-            version=PROJECT_VERSION,
+            version=get_version_id(),
             license_type=Gtk.License.MIT_X11,
             website="https://www.endlessos.org/key",
             issue_url="https://github.com/endlessm/endless-key-flatpak/issues",
