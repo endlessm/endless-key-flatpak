@@ -14,7 +14,6 @@ from gi.repository import Gtk
 from gi.repository import WebKit
 from kolibri_app.config import BASE_APPLICATION_ID
 from kolibri_app.config import PROJECT_VERSION
-from kolibri_app.globals import KOLIBRI_HOME_PATH
 from kolibri_app.globals import XDG_CURRENT_DESKTOP
 
 from .kolibri_context import KolibriChannelContext
@@ -43,16 +42,8 @@ class Application(Adw.Application):
         action.connect("activate", self.__on_open_documentation)
         self.add_action(action)
 
-        action = Gio.SimpleAction.new("open-forums", None)
-        action.connect("activate", self.__on_open_forums)
-        self.add_action(action)
-
         action = Gio.SimpleAction.new("new-window", None)
         action.connect("activate", self.__on_new_window)
-        self.add_action(action)
-
-        action = Gio.SimpleAction.new("open-kolibri-home", None)
-        action.connect("activate", self.__on_open_kolibri_home)
         self.add_action(action)
 
         action = Gio.SimpleAction.new("about", None)
@@ -95,20 +86,11 @@ class Application(Adw.Application):
 
     def __on_open_documentation(self, action, *args):
         self.open_url_in_external_application(
-            "https://kolibri.readthedocs.io/en/latest/"
+            "https://support.endlessos.org/en/endless-key"
         )
-
-    def __on_open_forums(self, action, *args):
-        self.open_url_in_external_application("https://community.learningequality.org/")
 
     def __on_new_window(self, action, *args):
         self.open_kolibri_window()
-
-    def __on_open_kolibri_home(self, action, *args):
-        # TODO: It would be better to open self.__dbus_proxy.props.kolibri_home,
-        #       but the Flatpak's OpenURI portal only allows us to open files
-        #       that exist in our sandbox.
-        self.open_url_in_external_application(KOLIBRI_HOME_PATH.as_uri())
 
     def __on_about(self, action, *args):
         about_window = Adw.AboutWindow(
@@ -122,8 +104,12 @@ class Application(Adw.Application):
                 kolibri_version=self.__context.kolibri_version,
             ),
             license_type=Gtk.License.MIT_X11,
-            website="https://learningequality.org",
-            issue_url="https://community.learningequality.org/",
+            website="https://www.endlessos.org/key",
+            issue_url="https://github.com/endlessm/endless-key-flatpak/issues",
+            support_url="https://support.endlessos.org/en/endless-key",
+        )
+        about_window.add_link(
+            _("Community Forums"), "https://community.endlessos.com/c/endless-key"
         )
         about_window.present()
 
@@ -146,7 +132,6 @@ class Application(Adw.Application):
 
         window = KolibriWindow(application=self, context=self.__context, **kwargs)
 
-        window.connect("open-in-browser", self.__window_on_open_in_browser)
         window.connect("open-new-window", self.__window_on_open_new_window)
         window.load_kolibri_url(target_url, present=True)
 
@@ -241,9 +226,6 @@ class Application(Adw.Application):
         self, context: KolibriContext, external_url: str
     ):
         self.open_url_in_external_application(external_url)
-
-    def __window_on_open_in_browser(self, window: KolibriWindow, current_url: str):
-        self.open_url_in_external_application(current_url)
 
     def __window_on_open_new_window(
         self, window: KolibriWindow, target_url: str, related_webview: WebKit.WebView

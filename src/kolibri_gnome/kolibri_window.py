@@ -35,7 +35,6 @@ class KolibriWindow(Adw.ApplicationWindow):
     __present_on_main_webview_ready: bool = True
 
     __gsignals__ = {
-        "open-in-browser": (GObject.SIGNAL_RUN_FIRST, None, (str,)),
         "open-new-window": (
             GObject.SIGNAL_RUN_FIRST,
             KolibriWebView,
@@ -62,7 +61,6 @@ class KolibriWindow(Adw.ApplicationWindow):
         self.add_action_entries(
             [
                 ("close", self.__on_close),
-                ("open-in-browser", self.__on_open_in_browser),
                 ("navigate-back", self.__on_navigate_back),
                 ("navigate-forward", self.__on_navigate_forward),
                 ("navigate-home", self.__on_navigate_home),
@@ -193,12 +191,6 @@ class KolibriWindow(Adw.ApplicationWindow):
         )
         self.__webview_stack.bind_property(
             "is_main_visible",
-            self.lookup_action("open-in-browser"),
-            "enabled",
-            GObject.BindingFlags.SYNC_CREATE,
-        )
-        self.__webview_stack.bind_property(
-            "is_main_visible",
             navigation_revealer,
             "reveal_child",
             GObject.BindingFlags.SYNC_CREATE,
@@ -240,11 +232,6 @@ class KolibriWindow(Adw.ApplicationWindow):
 
     def __on_close(self, action, *args):
         self.close()
-
-    def __on_open_in_browser(self, action, *args):
-        url = self.__webview_stack.get_uri()
-        if url:
-            self.emit("open-in-browser", url)
 
     def __on_navigate_back(self, action, *args):
         self.__webview_stack.go_back()
@@ -312,9 +299,6 @@ class _KolibriWindowMenu(Gio.Menu):
 
         main_section = Gio.Menu()
         main_section.append_item(Gio.MenuItem.new(_("New Window"), "app.new-window"))
-        main_section.append_item(
-            Gio.MenuItem.new(_("Open Kolibri Home Folder"), "app.open-kolibri-home")
-        )
         self.append_section(None, main_section)
 
         view_section = Gio.Menu()
@@ -322,9 +306,6 @@ class _KolibriWindowMenu(Gio.Menu):
         view_section.append_item(Gio.MenuItem.new(_("Actual Size"), "win.zoom-reset"))
         view_section.append_item(Gio.MenuItem.new(_("Zoom In"), "win.zoom-in"))
         view_section.append_item(Gio.MenuItem.new(_("Zoom Out"), "win.zoom-out"))
-        view_section.append_item(
-            Gio.MenuItem.new(_("Open in Browser"), "win.open-in-browser")
-        )
         self.append_section(None, view_section)
 
         if APP_DEVELOPER_EXTRAS:
@@ -335,11 +316,6 @@ class _KolibriWindowMenu(Gio.Menu):
             self.append_section(None, dev_section)
 
         help_section = Gio.Menu()
-        help_section.append_item(
-            Gio.MenuItem.new(_("Documentation"), "app.open-documentation")
-        )
-        help_section.append_item(
-            Gio.MenuItem.new(_("Community Forums"), "app.open-forums")
-        )
-        help_section.append_item(Gio.MenuItem.new(_("About"), "app.about"))
+        help_section.append_item(Gio.MenuItem.new(_("Help"), "app.open-documentation"))
+        help_section.append_item(Gio.MenuItem.new(_("About Endless Key"), "app.about"))
         self.append_section(None, help_section)

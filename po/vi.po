@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kolibri-mac-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 10:35-0700\n"
+"POT-Creation-Date: 2023-10-24 19:44-0700\n"
 "PO-Revision-Date: 2019-12-17 04:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Vietnamese\n"
@@ -15,104 +15,254 @@ msgstr ""
 "X-Crowdin-Language: vi\n"
 "X-Crowdin-File: macapp.pot\n"
 
-#: data/applications/org.learningequality.Kolibri.desktop.in:5
-#: data/metainfo/org.learningequality.Kolibri.metainfo.xml.in:4
-#: src/kolibri_gnome/desktop_launcher/application.py:294
-msgid "Kolibri"
+#: data/applications/org.learningequality.Kolibri.Frontend.desktop.in.in:5
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:4
+#: src/kolibri_gnome/application.py:30 src/kolibri_gnome/application.py:99
+msgid "Endless Key"
 msgstr ""
 
-#: data/applications/org.learningequality.Kolibri.desktop.in:6
-#: data/metainfo/org.learningequality.Kolibri.metainfo.xml.in:6
+#: data/applications/org.learningequality.Kolibri.Frontend.desktop.in.in:6
 msgid "Offline education technology platform"
 msgstr ""
 
 #. TRANSLATORS: These are search terms to find this application.
 #. Terms MUST be separated by semicolons.
 #. This list must end with a semicolon.
-#: data/applications/org.learningequality.Kolibri.desktop.in:10
+#: data/applications/org.learningequality.Kolibri.Frontend.desktop.in.in:10
 msgid "education;multimedia;videos;learning;quiz;"
 msgstr ""
 
-#: data/metainfo/org.learningequality.Kolibri.metainfo.xml.in:5
-msgid "Learning Equality"
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:5
+msgid "Endless OS Foundation"
 msgstr ""
 
-#: data/metainfo/org.learningequality.Kolibri.metainfo.xml.in:15
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:6
+msgid "Curated learning anytime, anywhere"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:13
 msgid ""
-"Kolibri makes high quality education technology available in low-resource "
-"communities such as rural schools, refugee camps, orphanages, non-formal "
-"school systems, and prison systems. Running on a wide variety of hardware, "
-"it enables offline access to a rich set of content and tools to support "
-"learners, coaches, and administrators."
+"A private and safe app where learners can explore dozens of educational "
+"resources that are carefully curated to provide extended learning. Explore "
+"interest-based options like coding, arts &amp; crafts, cooking, and STEM, "
+"both online and offline. The majority of the resources are in English, with "
+"a small number in Spanish."
 msgstr ""
 
-#: data/metainfo/org.learningequality.Kolibri.metainfo.xml.in:20
-msgid "Browsing content channels in Kolibri"
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:14
+msgid "Grades 5–9 ✨"
 msgstr ""
 
-#: src/kolibri_gnome/desktop_launcher/application.py:133
-msgid "File"
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:16
+msgid "2700+ Curated resources 📚"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:17
+msgid "1500+ Videos 📹"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:18
+msgid "300+ E-books 📖"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:20
+msgid "Benefits for Teachers 🍎"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:22
+msgid "Includes vetted resources from leading educational organizations ✔️"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:23
+msgid "Supports self-guided learners 🚀"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:24
+msgid "Supplements traditional lessons 🎒"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:25
+msgid "Promotes diversity and cultural relevance 🌍"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:27
+msgid "Benefits for Learners 🎓"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:29
+msgid "Works online and offline 🌐"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:30
+msgid "Promotes curiosity-driven learning 💡"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:31
+msgid "Provides a safe learning environment 🛡️"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:32
+msgid "Meets data privacy requirements"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:33
+msgid "Curated to be interest-based ❤️"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:39
+msgid ""
+"1 Bring equity into the classroom; curated learning anywhere, anytime with "
+"Endless Key"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:43
+msgid ""
+"2 Works online and offline; access learning resources for coding, STEM, "
+"cooking, and arts &amp; crafts!"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:47
+msgid ""
+"3 Resources such as finance, healthy body, TED Ed, sports, games, arts &amp; "
+"crafts, gardening, and more"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:51
+msgid ""
+"4 Engaging and interactive; discover an abundance of ready-made resources, "
+"games, simulations, etc"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:55
+msgid ""
+"5 Completely free; access without an account, safeguarded data, and no ads"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:59
+msgid "6 Grades 5–9, 2700+ curated resources, 1500+ videos, 300+ e-books"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:67
+msgid "Fix Spanish content pack download and fix font rendering."
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:74
+msgid "Have better Spanish translation."
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:81
+msgid "The loading screen shown during startup has been improved."
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:82
+msgid "The content downloaded during first launch can now be selected."
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:83
+msgid "An initial Spanish translation has been added."
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:90
+msgid "Fix screenshots' captions of application information"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:97
+msgid "Fix screenshots of application information"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:104
+msgid "Fix application information"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:111
+msgid "Provide Endless Key onboarding experience"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:112
+msgid "Improve application information for users"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:113
+msgid "Update underlying application"
+msgstr ""
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:119
+msgid "This is the initial release of Endless Key."
+msgstr ""
+
+#: src/kolibri_gnome/application.py:101
+msgid "© 2023 Endless OS Foundation"
+msgstr ""
+
+#: src/kolibri_gnome/application.py:102
+#, python-brace-format
+msgid "{kolibri_version} ({app_version})"
+msgstr ""
+
+#: src/kolibri_gnome/application.py:112
+msgid "Community Forums"
+msgstr "Diễn đàn cộng đồng"
+
+#: src/kolibri_gnome/application.py:176
+#, fuzzy
+msgid "Save File"
 msgstr "Tệp tin"
 
-#: src/kolibri_gnome/desktop_launcher/application.py:134
+#: src/kolibri_gnome/kolibri_window.py:301
 msgid "New Window"
 msgstr "Cửa sổ mới"
 
-#: src/kolibri_gnome/desktop_launcher/application.py:135
-msgid "Close Window"
-msgstr "Đóng cửa sổ"
-
-#: src/kolibri_gnome/desktop_launcher/application.py:137
-msgid "Open Kolibri Home Folder"
-msgstr "Mở thư mục Trang chủ Kolibri"
-
-#: src/kolibri_gnome/desktop_launcher/application.py:141
-msgid "View"
-msgstr "Xem"
-
-#: src/kolibri_gnome/desktop_launcher/application.py:142
+#: src/kolibri_gnome/kolibri_window.py:305
 msgid "Reload"
 msgstr "Tải lại"
 
-#: src/kolibri_gnome/desktop_launcher/application.py:143
+#: src/kolibri_gnome/kolibri_window.py:306
 msgid "Actual Size"
 msgstr "Kích thước thực"
 
-#: src/kolibri_gnome/desktop_launcher/application.py:144
+#: src/kolibri_gnome/kolibri_window.py:307
 msgid "Zoom In"
 msgstr "Phóng to"
 
-#: src/kolibri_gnome/desktop_launcher/application.py:145
+#: src/kolibri_gnome/kolibri_window.py:308
 msgid "Zoom Out"
 msgstr "Thu nhỏ"
 
-#: src/kolibri_gnome/desktop_launcher/application.py:147
-msgid "Open in Browser"
-msgstr "Mở trong trình duyệt"
+#: src/kolibri_gnome/kolibri_window.py:314
+msgid "Show Developer Tools"
+msgstr ""
 
-#: src/kolibri_gnome/desktop_launcher/application.py:150
-msgid "History"
-msgstr "Lịch sử"
-
-#: src/kolibri_gnome/desktop_launcher/application.py:151
-msgid "Back"
-msgstr "Quay lại"
-
-#: src/kolibri_gnome/desktop_launcher/application.py:152
-msgid "Forward"
-msgstr "Tới trước"
-
-#: src/kolibri_gnome/desktop_launcher/application.py:155
+#: src/kolibri_gnome/kolibri_window.py:319
 msgid "Help"
 msgstr "Trợ giúp"
 
-#: src/kolibri_gnome/desktop_launcher/application.py:156
-msgid "Documentation"
-msgstr "Tài liệu"
+#: src/kolibri_gnome/kolibri_window.py:320
+msgid "About Endless Key"
+msgstr ""
 
-#: src/kolibri_gnome/desktop_launcher/application.py:157
-msgid "Community Forums"
-msgstr "Diễn đàn cộng đồng"
+#~ msgid "Close Window"
+#~ msgstr "Đóng cửa sổ"
+
+#~ msgid "Open Kolibri Home Folder"
+#~ msgstr "Mở thư mục Trang chủ Kolibri"
+
+#~ msgid "View"
+#~ msgstr "Xem"
+
+#~ msgid "Open in Browser"
+#~ msgstr "Mở trong trình duyệt"
+
+#~ msgid "History"
+#~ msgstr "Lịch sử"
+
+#~ msgid "Back"
+#~ msgstr "Quay lại"
+
+#~ msgid "Forward"
+#~ msgstr "Tới trước"
+
+#~ msgid "Documentation"
+#~ msgstr "Tài liệu"
 
 #~ msgid "Edit"
 #~ msgstr "Sửa"
