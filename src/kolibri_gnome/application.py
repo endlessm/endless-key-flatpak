@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import logging
 import typing
 from functools import partial
@@ -13,8 +14,8 @@ from gi.repository import GObject
 from gi.repository import Gtk
 from gi.repository import WebKit
 from kolibri_app.config import BASE_APPLICATION_ID
-from kolibri_app.config import PROJECT_VERSION
 from kolibri_app.globals import XDG_CURRENT_DESKTOP
+from kolibri_app.utils import get_version_id
 
 from .kolibri_context import KolibriChannelContext
 from .kolibri_context import KolibriContext
@@ -99,19 +100,24 @@ class Application(Adw.Application):
             application_name=_("Endless Key"),
             application_icon=BASE_APPLICATION_ID,
             copyright=_("© 2023 Endless OS Foundation"),
-            version=_("{kolibri_version} ({app_version})").format(
-                app_version=PROJECT_VERSION,
-                kolibri_version=self.__context.kolibri_version,
-            ),
+            version=get_version_id(),
             license_type=Gtk.License.MIT_X11,
             website="https://www.endlessos.org/key",
             issue_url="https://github.com/endlessm/endless-key-flatpak/issues",
             support_url="https://support.endlessos.org/en/endless-key",
+            debug_info=self.__format_debug_info(),
+            debug_info_filename="endless-key-debug-info.json",
         )
         about_window.add_link(
             _("Community Forums"), "https://community.endlessos.com/c/endless-key"
         )
         about_window.present()
+
+    def __format_debug_info(self):
+        return json.dumps(
+            self.__context.get_debug_info(),
+            indent=4,
+        )
 
     def __on_quit(self, action, *args):
         self.quit()
