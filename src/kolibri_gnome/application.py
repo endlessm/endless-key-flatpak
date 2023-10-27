@@ -5,6 +5,7 @@ import logging
 import typing
 from functools import partial
 from gettext import gettext as _
+from pathlib import Path
 from urllib.parse import urlsplit
 
 from gi.repository import Adw
@@ -14,6 +15,9 @@ from gi.repository import GObject
 from gi.repository import Gtk
 from gi.repository import WebKit
 from kolibri_app.config import BASE_APPLICATION_ID
+from kolibri_app.config import BASE_OBJECT_PATH
+from kolibri_app.config import KOLIBRI_APP_DATA_DIR
+from kolibri_app.config import PROJECT_VERSION
 from kolibri_app.globals import XDG_CURRENT_DESKTOP
 from kolibri_app.utils import get_version_id
 
@@ -34,6 +38,11 @@ class Application(Adw.Application):
         self, *args, context: typing.Optional[KolibriContext] = None, **kwargs
     ):
         super().__init__(*args, flags=Gio.ApplicationFlags.HANDLES_OPEN, **kwargs)
+
+        resource = Gio.Resource.load(
+            Path(KOLIBRI_APP_DATA_DIR, "kolibri-app.gresource").as_posix()
+        )
+        resource._register()
 
         self.__context = context or KolibriContext()
         self.__context.connect("download-started", self.__context_on_download_started)
@@ -94,23 +103,17 @@ class Application(Adw.Application):
         self.open_kolibri_window()
 
     def __on_about(self, action, *args):
-        about_window = Adw.AboutWindow(
-            transient_for=self.get_active_window(),
-            modal=True,
-            application_name=_("Endless Key"),
-            application_icon=BASE_APPLICATION_ID,
-            copyright=_("© 2023 Endless OS Foundation"),
-            version=get_version_id(),
-            license_type=Gtk.License.MIT_X11,
-            website="https://www.endlessos.org/key",
-            issue_url="https://github.com/endlessm/endless-key-flatpak/issues",
-            support_url="https://support.endlessos.org/en/endless-key",
-            debug_info=self.__format_debug_info(),
-            debug_info_filename="endless-key-debug-info.json",
+        about_window = Adw.AboutWindow.new_from_appdata(
+            f"{BASE_OBJECT_PATH}/{BASE_APPLICATION_ID}.metainfo.xml", PROJECT_VERSION
         )
+        about_window.set_version(get_version_id())
         about_window.add_link(
             _("Community Forums"), "https://community.endlessos.com/c/endless-key"
         )
+        about_window.set_debug_info(self.__format_debug_info())
+        about_window.set_debug_info_filename("endless-key-debug-info.json")
+        about_window.set_transient_for(self.get_active_window())
+        about_window.set_modal(True)
         about_window.present()
 
     def __format_debug_info(self):
