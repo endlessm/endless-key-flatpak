@@ -17,9 +17,9 @@ from gi.repository import WebKit
 from kolibri_app.config import BASE_APPLICATION_ID
 from kolibri_app.config import BASE_OBJECT_PATH
 from kolibri_app.config import KOLIBRI_APP_DATA_DIR
-from kolibri_app.config import PROJECT_VERSION
+from kolibri_app.globals import get_release_notes_version
+from kolibri_app.globals import get_version
 from kolibri_app.globals import XDG_CURRENT_DESKTOP
-from kolibri_app.utils import get_version_id
 
 from .kolibri_context import KolibriChannelContext
 from .kolibri_context import KolibriContext
@@ -104,9 +104,10 @@ class Application(Adw.Application):
 
     def __on_about(self, action, *args):
         about_window = Adw.AboutWindow.new_from_appdata(
-            f"{BASE_OBJECT_PATH}/{BASE_APPLICATION_ID}.metainfo.xml", PROJECT_VERSION
+            f"{BASE_OBJECT_PATH}/{BASE_APPLICATION_ID}.metainfo.xml",
+            get_release_notes_version(),
         )
-        about_window.set_version(get_version_id())
+        about_window.set_version(get_version())
         about_window.add_link(
             _("Community Forums"), "https://community.endlessos.com/c/endless-key"
         )

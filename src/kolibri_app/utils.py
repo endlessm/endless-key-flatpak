@@ -3,8 +3,6 @@ from __future__ import annotations
 import os
 import typing
 
-from . import config
-
 
 _APP_MODULES_LIST = [
     "kolibri",
@@ -34,13 +32,6 @@ def getenv_as_bool(key: str, default: bool = False) -> bool:
         return False
 
     return default
-
-
-def get_version_id() -> str:
-    if config.BUILD_PROFILE == "development":
-        return config.VCS_TAG
-    else:
-        return config.PROJECT_VERSION
 
 
 def get_app_modules_debug_info() -> dict:
