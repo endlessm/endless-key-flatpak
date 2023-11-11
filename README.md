@@ -148,6 +148,12 @@ component of the project's version number.
 
 ### Debugging and advanced usage
 
+#### Kolibri debug mode
+
+When Kolibri is run in debug mode, it uses debug logging for its modules
+and enables Django's debug mode. To enable Kolibri debug mode, start
+kolibri-daemon with the `KOLIBRI_DEBUG` environment variable set to `1`.
+
 #### Web inspector
 
 For development builds, kolibri-gnome enables WebKit developer extras. You can

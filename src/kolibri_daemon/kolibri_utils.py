@@ -11,6 +11,7 @@ from pathlib import Path
 
 from kolibri_app.config import ENDLESS_KEY_DATA_DIR
 from kolibri_app.globals import APP_AUTOMATIC_PROVISION
+from kolibri_app.utils import getenv_as_bool
 
 from .content_extensions_manager import ContentExtensionsManager
 
@@ -50,6 +51,12 @@ def init_kolibri(**kwargs):
 
     for plugin_name in OPTIONAL_PLUGINS:
         _enable_kolibri_plugin(plugin_name, optional=True)
+
+    # Use the KOLIBRI_DEBUG environment variable for the Kolibri debug
+    # initialization value. This is basically equivalent to how "kolibri
+    # start" works.
+    if "debug" not in kwargs:
+        kwargs["debug"] = getenv_as_bool("KOLIBRI_DEBUG", default=False)
 
     initialize(**kwargs)
 
