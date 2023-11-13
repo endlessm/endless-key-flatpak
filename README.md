@@ -153,6 +153,17 @@ component of the project's version number.
 When Kolibri is run in debug mode, it uses debug logging for its modules
 and enables Django's debug mode. To enable Kolibri debug mode, start
 kolibri-daemon with the `KOLIBRI_DEBUG` environment variable set to `1`.
+Since the daemon is typically D-Bus activated, the best way to
+accomplish this when using the flatpak is set the environment variable
+in an override:
+
+```
+flatpak override --env=KOLIBRI_DEBUG=1 org.endlessos.Key.Devel
+```
+
+To enable debug logging for database queries, the
+`KOLIBRI_DEBUG_LOG_DATABASE` environment variable can be set in the same
+way as the `KOLIBRI_DEBUG` environment variable.
 
 #### Web inspector
 
