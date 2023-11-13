@@ -52,11 +52,15 @@ def init_kolibri(**kwargs):
     for plugin_name in OPTIONAL_PLUGINS:
         _enable_kolibri_plugin(plugin_name, optional=True)
 
-    # Use the KOLIBRI_DEBUG environment variable for the Kolibri debug
-    # initialization value. This is basically equivalent to how "kolibri
-    # start" works.
+    # Use the KOLIBRI_DEBUG and KOLIBRI_DEBUG_LOG_DATABASE environment
+    # variables for the Kolibri debug initialization values. This is
+    # basically equivalent to how "kolibri start" works.
     if "debug" not in kwargs:
         kwargs["debug"] = getenv_as_bool("KOLIBRI_DEBUG", default=False)
+    if "debug_database" not in kwargs:
+        kwargs["debug_database"] = getenv_as_bool(
+            "KOLIBRI_DEBUG_LOG_DATABASE", default=False
+        )
 
     initialize(**kwargs)
 

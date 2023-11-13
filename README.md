@@ -161,6 +161,10 @@ in an override:
 flatpak override --env=KOLIBRI_DEBUG=1 org.endlessos.Key.Devel
 ```
 
+To enable debug logging for database queries, the
+`KOLIBRI_DEBUG_LOG_DATABASE` environment variable can be set in the same
+way as the `KOLIBRI_DEBUG` environment variable.
+
 #### Web inspector
 
 For development builds, kolibri-gnome enables WebKit developer extras. You can
