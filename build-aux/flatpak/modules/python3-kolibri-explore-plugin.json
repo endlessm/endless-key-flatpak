@@ -10,8 +10,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.11.0/kolibri_explore_plugin-7.11.0-py3-none-any.whl",
-            "sha256": "687cc86e2901909ec4ac41a8961f534674de89d6addb008565e59917a34b30fd",
+            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.12.0/kolibri_explore_plugin-7.12.0-py3-none-any.whl",
+            "sha256": "f02f96e26914c9fec4213462ac8188cc827bc1dbcef6dc9206a813ca9c09b6f0",
             "x-checker-data": {
                 "type": "json",
                 "url": "https://api.github.com/repos/endlessm/kolibri-explore-plugin/releases/latest",
@@ -24,8 +24,8 @@
         },
         {
             "type": "archive",
-            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.11.0/apps-bundle.zip",
-            "sha256": "45d2986740ce783a451d861d76516baef041398c93e1745939723dfda9ac6dec",
+            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.12.0/apps-bundle.zip",
+            "sha256": "782f0d6cd16d86731f6c32d1d31ddc8758d8cc6a40032ab4e4bc1ad0db51620b",
             "dest": "apps-bundle",
             "x-checker-data": {
                 "type": "json",
@@ -39,8 +39,8 @@
         },
         {
             "type": "archive",
-            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.11.0/loading-screen.zip",
-            "sha256": "656a443e3f93f771c49265fd7c636cffab8ebac299f8718cc978972d5eb70e86",
+            "url": "https://github.com/endlessm/kolibri-explore-plugin/releases/download/v7.12.0/loading-screen.zip",
+            "sha256": "bbb77f9c8dde9c317debdd5a4e54077c7830e7882c9d93dcca364be2fcef5024",
             "strip-components": 0,
             "dest": "loading-screen",
             "x-checker-data": {
