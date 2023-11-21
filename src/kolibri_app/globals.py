@@ -77,6 +77,20 @@ def init_logging(log_file_name: str = "kolibri-app.txt", level: int = logging.DE
     return logs_dir_path
 
 
+def get_version() -> str:
+    if config.BUILD_PROFILE == "development":
+        return config.VCS_TAG
+    else:
+        return config.PROJECT_VERSION
+
+
+def get_release_notes_version() -> str:
+    if config.BUILD_PROFILE == "development":
+        return config.PROJECT_VERSION + "+next"
+    else:
+        return config.PROJECT_VERSION
+
+
 def get_current_language() -> typing.Optional[str]:
     try:
         translations = gettext.translation(

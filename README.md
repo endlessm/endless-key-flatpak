@@ -129,19 +129,37 @@ them into kolibri-gnome arguments. Starts kolibri-gnome with a
 specific application ID depending on the URI. This is why a launcher
 process is needed instead of handling these URIs in kolibri-gnome.
 
-#### Creating releases
+#### Managing release notes
 
-Before creating a release, be sure you update [org.endlessos.Key.metainfo.xml.in.in](data/metainfo/org.endlessos.Key.metainfo.xml.in.in)
-with information about the new release, and mark it as stable.
-
-Next, use [bump2version](<https://pypi.org/project/bump2version/>). This will
-create a new git tag and update the `VERSION` file in the project root:
+While making changes for an upcoming release, please update [org.endlessos.Key.metainfo.xml.in.in](data/metainfo/org.endlessos.Key.metainfo.xml.in.in)
+with information about those changes. In the `<releases>` section, there should
+always be a release entry with `version` set to the previous version followed by
+`+next`, like this:
 
 ```
-bump2version minor
+<release version="0.7+next" date="2023-10-27" type="development">
+  <description>
+    <ul>
+      <li>The description of a new feature goes here.</li>
+    </ul>
+  </description>
+</release>
+```
+
+If there is not one, please create one as the first entry in `<releases>`.
+
+#### Creating releases
+
+To create a release, use [bump-my-version](<https://pypi.org/project/bump-my-version/>):
+
+```
+bump-my-version bump minor
 git push
 git push --tags
 ```
+
+This will create a new git tag, update the `VERSION` file in the project root,
+and update the "+next" release entry in [org.endlessos.Key.metainfo.xml.in.in](data/metainfo/org.endlessos.Key.metainfo.xml.in.in).
 
 Note that it is possible to increment either the `major`, `minor`, or `patch`
 component of the project's version number.
