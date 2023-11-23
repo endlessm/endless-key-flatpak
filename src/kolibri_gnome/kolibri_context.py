@@ -5,8 +5,8 @@ import re
 import typing
 from pathlib import Path
 from urllib.parse import parse_qs
+from urllib.parse import quote
 from urllib.parse import SplitResult
-from urllib.parse import urlencode
 from urllib.parse import urlsplit
 
 from gi.repository import Gio
@@ -193,42 +193,35 @@ class KolibriContext(GObject.GObject):
 
         url_path = url_tuple.path.lstrip("/")
         url_query = parse_qs(url_tuple.query, keep_blank_values=True)
+        url_context = url_query.get("context", [])
         url_search = " ".join(url_query.get("search", []))
 
         node_type, _, node_id = url_path.partition("/")
+        # With the search provider, a content node can be activated in the
+        # context of a specific Kolibri channel. We use this information for the
+        # Explore plugin to display the content correctly.
+        channel_id = url_context[0] if url_context else None
 
-        if node_type == "c":
-            return self._get_kolibri_content_path(node_id, url_search)
-        elif node_type == "t":
-            # As a special case, don't include the search property for topic
-            # nodes. This means Kolibri will always show a simple browsing
-            # interface for a topic, instead of a search interface.
-            return self._get_kolibri_topic_path(node_id, None)
+        # TODO: These URL generators have been crudely patched downstream.
+        #       Instead, we should move this type of code to a plugin specific
+        #       to the Endless Key app.
+
+        if channel_id and node_id:
+            return self._get_kolibri_content_path(channel_id, node_type, node_id)
         else:
-            return self._get_kolibri_library_path(url_search)
+            return self._get_kolibri_library_path(search=url_search)
 
     def _get_kolibri_content_path(
-        self, node_id: str, search: typing.Optional[str] = None
+        self, channel_id: str, node_type: str, node_id: str
     ) -> str:
-        if search:
-            query = {"keywords": search, "last": "TOPICS_TOPIC_SEARCH"}
-            return f"{LEARN_PATH_PREFIX}topics/c/{node_id}?{urlencode(query)}"
+        if node_id != channel_id:
+            return f"{LEARN_PATH_PREFIX}topics/{channel_id}/{node_type}/{node_id}"
         else:
-            return f"{LEARN_PATH_PREFIX}topics/c/{node_id}"
-
-    def _get_kolibri_topic_path(
-        self, node_id: str, search: typing.Optional[str] = None
-    ) -> str:
-        if search:
-            query = {"keywords": search}
-            return f"{LEARN_PATH_PREFIX}topics/t/{node_id}/search?{urlencode(query)}"
-        else:
-            return f"{LEARN_PATH_PREFIX}topics/t/{node_id}"
+            return f"{LEARN_PATH_PREFIX}topics/{channel_id}"
 
     def _get_kolibri_library_path(self, search: typing.Optional[str] = None) -> str:
         if search:
-            query = {"keywords": search}
-            return f"{LEARN_PATH_PREFIX}library?{urlencode(query)}"
+            return f"{LEARN_PATH_PREFIX}search/{quote(search)}"
         else:
             return f"{LEARN_PATH_PREFIX}home"
 
@@ -409,11 +402,9 @@ class KolibriChannelContext(KolibriContext):
         return f"{LEARN_PATH_PREFIX}topics/{self.__channel_id}"
 
     def _get_kolibri_library_path(self, search: typing.Optional[str] = None) -> str:
-        if search:
-            query = {"keywords": search}
-            return f"{self.__default_path}/search?{urlencode(query)}"
-        else:
-            return self.__default_path
+        # At the moment, there is no way to tell the Explore plugin to search
+        # within a channel.
+        return self.__default_path
 
     def is_url_in_scope(self, url: str) -> bool:
         # Allow the user to navigate to login and account management pages, as
