@@ -8,8 +8,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://github.com/learningequality/kolibri/releases/download/v0.16.0-beta8/kolibri-0.16.0b8-py2.py3-none-any.whl",
-            "sha256": "768d05fba7beac79e99f51317736f55069a2c19548c8bcadd7003900d58f510a",
+            "url": "https://github.com/learningequality/kolibri/releases/download/v0.16.0-beta9/kolibri-0.16.0b9-py2.py3-none-any.whl",
+            "sha256": "1513c159ade9a9a312974d29ede02754184ad904b32e858409c32a8b4a1d55a6",
             "x-checker-data": {
                 "type": "json",
                 "url": "https://api.github.com/repos/learningequality/kolibri/releases",
