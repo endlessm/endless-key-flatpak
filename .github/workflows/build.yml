@@ -70,4 +70,4 @@ jobs:
             --env=G_DEBUG=fatal-criticals \
             --command=appstream-util \
             org.flatpak.Builder \
-            validate flatpak_app/files/share/appdata/org.endlessos.Key.Devel.appdata.xml
+            validate flatpak_app/files/share/metainfo/org.endlessos.Key.Devel.metainfo.xml
