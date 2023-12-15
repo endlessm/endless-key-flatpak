@@ -35,7 +35,7 @@ jobs:
           GIT_AUTHOR_EMAIL: os@endlessos.org
           GIT_COMMITTER_EMAIL: os@endlessos.org
           EMAIL: os@endlessos.org
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
         working-directory: build-aux/flatpak
         run: |
           /app/flatpak-external-data-checker --update --verbose --never-fork \
