@@ -8,8 +8,8 @@
     "sources": [
         {
             "type": "archive",
-            "url": "https://github.com/endlessm/endless-key-collections/releases/download/v0.4.2/collections.zip",
-            "sha256": "a8ca120c47a03dc91b2668add5038bea4fb3177446fadd6b58923b6c6ed95e75",
+            "url": "https://github.com/endlessm/endless-key-collections/releases/download/v0.4.3/collections.zip",
+            "sha256": "65dcafbde62ff20ebf9e8cc88bdd745e7fdee37aee04d0a0b1bd7a6d7a86b0c8",
             "dest": "collections",
             "x-checker-data": {
                 "type": "json",
