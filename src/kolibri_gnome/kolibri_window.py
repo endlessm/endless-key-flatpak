@@ -94,7 +94,7 @@ class KolibriWindow(Adw.ApplicationWindow):
         menu_button = Gtk.MenuButton(
             direction=Gtk.ArrowType.NONE,
             tooltip_text=_("Main Menu"),
-            primary=True
+            primary=True,
         )
         self.__header_bar.pack_end(menu_button)
 
