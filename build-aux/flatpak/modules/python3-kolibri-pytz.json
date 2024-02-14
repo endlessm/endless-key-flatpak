@@ -2,7 +2,7 @@
     "name": "python3-pytz",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" pytz==2023.3.post1 --upgrade --target=\"${KOLIBRI_MODULE_PATH}/dist/\""
+        "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" pytz==2024.1 --upgrade --target=\"${KOLIBRI_MODULE_PATH}/dist/\""
     ],
     "sources": [
         {
