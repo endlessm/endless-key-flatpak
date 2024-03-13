@@ -7,8 +7,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/bb/0a/203797141ec9727344c7649f6d5f6cf71b89a6c28f8f55d4f18de7a1d352/setuptools-69.1.0-py3-none-any.whl",
-            "sha256": "c054629b81b946d63a9c6e732bc8b2513a7c3ea645f11d0139a2191d735c60c6",
+            "url": "https://files.pythonhosted.org/packages/92/e1/1c8bb3420105e70bdf357d57dd5567202b4ef8d27f810e98bb962d950834/setuptools-69.2.0-py3-none-any.whl",
+            "sha256": "c21c49fb1042386df081cb5d86759792ab89efca84cf114889191cd09aacc80c",
             "x-checker-data": {
                 "type": "pypi",
                 "name": "setuptools",
@@ -17,8 +17,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/c7/c3/55076fc728723ef927521abaa1955213d094933dc36d4a2008d5101e1af5/wheel-0.42.0-py3-none-any.whl",
-            "sha256": "177f9c9b0d45c47873b619f5b650346d632cdc35fb5e4d25058e09c9e581433d",
+            "url": "https://files.pythonhosted.org/packages/7d/cd/d7460c9a869b16c3dd4e1e403cce337df165368c71d6af229a74699622ce/wheel-0.43.0-py3-none-any.whl",
+            "sha256": "55c570405f142630c6b9f72fe09d9b67cf1477fcf543ae5b8dcb1f5b7377da81",
             "x-checker-data": {
                 "type": "pypi",
                 "name": "wheel",
