@@ -7,8 +7,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/bb/0a/203797141ec9727344c7649f6d5f6cf71b89a6c28f8f55d4f18de7a1d352/setuptools-69.1.0-py3-none-any.whl",
-            "sha256": "c054629b81b946d63a9c6e732bc8b2513a7c3ea645f11d0139a2191d735c60c6",
+            "url": "https://files.pythonhosted.org/packages/9a/dd/5be5c6958d2d8fccf26b0274303f2c960a0eba88b84980e71e6f795cdd87/setuptools-69.5.0-py3-none-any.whl",
+            "sha256": "3b2dbd8f63dcc6b7c327d0243c2d7dc8c96cc507c016f09221f3787e6e528719",
             "x-checker-data": {
                 "type": "pypi",
                 "name": "setuptools",
@@ -17,8 +17,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/c7/c3/55076fc728723ef927521abaa1955213d094933dc36d4a2008d5101e1af5/wheel-0.42.0-py3-none-any.whl",
-            "sha256": "177f9c9b0d45c47873b619f5b650346d632cdc35fb5e4d25058e09c9e581433d",
+            "url": "https://files.pythonhosted.org/packages/7d/cd/d7460c9a869b16c3dd4e1e403cce337df165368c71d6af229a74699622ce/wheel-0.43.0-py3-none-any.whl",
+            "sha256": "55c570405f142630c6b9f72fe09d9b67cf1477fcf543ae5b8dcb1f5b7377da81",
             "x-checker-data": {
                 "type": "pypi",
                 "name": "wheel",
@@ -27,8 +27,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/f8/3e/32cbd0129a28686621434cbf17bb64bf1458bfb838f1f668262fefce145c/pillow-10.2.0.tar.gz",
-            "sha256": "e87f0b2c78157e12d7686b27d63c070fd65d994e8ddae6f328e0dcf4a0cd007e",
+            "url": "https://files.pythonhosted.org/packages/ef/43/c50c17c5f7d438e836c169e343695534c38c77f60e7c90389bd77981bc21/pillow-10.3.0.tar.gz",
+            "sha256": "9d2455fbf44c914840c793e89aa82d0e1763a14253a000743719ae5946814b2d",
             "x-checker-data": {
                 "type": "pypi",
                 "name": "Pillow",
