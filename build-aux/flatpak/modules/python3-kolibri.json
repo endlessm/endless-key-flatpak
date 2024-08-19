@@ -16,7 +16,7 @@
                 "packagetype": "bdist_wheel",
                 "versions": {
                     ">=": "0.16.0",
-                    "<": "0.17.0"
+                    "<": "0.16.2"
                 },
                 "stable-only": true
             }
