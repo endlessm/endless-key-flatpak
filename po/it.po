@@ -20,7 +20,7 @@ msgstr ""
 #: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:4
 #: src/kolibri_gnome/application.py:30 src/kolibri_gnome/application.py:99
 msgid "Endless Key"
-msgstr "Chiave infinita"
+msgstr "Endless Key"
 
 #: data/applications/org.learningequality.Kolibri.Frontend.desktop.in.in:6
 msgid "Offline education technology platform"
