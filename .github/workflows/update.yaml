@@ -1,7 +1,8 @@
 name: Check for updates
 on:
-  schedule:
-    - cron: "0 * * * *" # run every hour
+  # Only allow manual run for now since no one is handling the generated PRs.
+  # schedule:
+  #   - cron: "0 * * * *" # run every hour
   workflow_dispatch:
 
 jobs:
