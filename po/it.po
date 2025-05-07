@@ -1,0 +1,255 @@
+# ITALIAN TRANSLATION.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the kolibri-gnome package.
+# ALBANO BATTISTELLA <ALBANOBATTISTELLA@GMAIL.COM>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kolibri-gnome\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-24 19:44-0700\n"
+"PO-Revision-Date: 2024-08-20 15:30+0200\n"
+"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/applications/org.learningequality.Kolibri.Frontend.desktop.in.in:5
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:4
+#: src/kolibri_gnome/application.py:30 src/kolibri_gnome/application.py:99
+msgid "Endless Key"
+msgstr "Endless Key"
+
+#: data/applications/org.learningequality.Kolibri.Frontend.desktop.in.in:6
+msgid "Offline education technology platform"
+msgstr "Piattaforma tecnologica per l'istruzione offline"
+
+#. TRANSLATORS: These are search terms to find this application.
+#. Terms MUST be separated by semicolons.
+#. This list must end with a semicolon.
+#: data/applications/org.learningequality.Kolibri.Frontend.desktop.in.in:10
+msgid "education;multimedia;videos;learning;quiz;"
+msgstr "istruzione;multimedia;video;apprendimento;quiz;"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:5
+msgid "Endless OS Foundation"
+msgstr "Fondazione Endless OS"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:6
+msgid "Curated learning anytime, anywhere"
+msgstr "Apprendimento curato sempre e ovunque"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:13
+msgid ""
+"A private and safe app where learners can explore dozens of educational "
+"resources that are carefully curated to provide extended learning. Explore "
+"interest-based options like coding, arts &amp; crafts, cooking, and STEM, "
+"both online and offline. The majority of the resources are in English, with "
+"a small number in Spanish."
+msgstr ""
+"Un'app privata e sicura in cui gli studenti possono esplorare decine di risorse educative "
+"attentamente curate per fornire un apprendimento esteso. Esplora "
+"opzioni basate sugli interessi come programmazione, arti e mestieri, cucina e STEM, "
+"sia online che offline. La maggior parte delle risorse è in inglese, con "
+"un piccolo numero in spagnolo."
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:14
+msgid "Grades 5–9 ✨"
+msgstr "Classi 5–9 ✨"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:16
+msgid "2700+ Curated resources 📚"
+msgstr "Oltre 2700 risorse selezionate 📚"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:17
+msgid "1500+ Videos 📹"
+msgstr "Oltre 1500 video 📹"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:18
+msgid "300+ E-books 📖"
+msgstr "Oltre 300 e-book 📖"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:20
+msgid "Benefits for Teachers 🍎"
+msgstr "Vantaggi per gli insegnanti 🍎"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:22
+msgid "Includes vetted resources from leading educational organizations ✔️"
+msgstr "Include risorse verificate da importanti organizzazioni educative ✔️"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:23
+msgid "Supports self-guided learners 🚀"
+msgstr "Supporta gli studenti con auto-guide 🚀"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:24
+msgid "Supplements traditional lessons 🎒"
+msgstr "Integra le lezioni tradizionali 🎒"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:25
+msgid "Promotes diversity and cultural relevance 🌍"
+msgstr "Promuove la diversità e la rilevanza culturale 🌍"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:27
+msgid "Benefits for Learners 🎓"
+msgstr "Vantaggi per gli studenti 🎓"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:29
+msgid "Works online and offline 🌐"
+msgstr "Funziona online e offline 🌐"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:30
+msgid "Promotes curiosity-driven learning 💡"
+msgstr "Promuove l'apprendimento guidato dalla curiosità 💡"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:31
+msgid "Provides a safe learning environment 🛡️"
+msgstr "Fornisce un ambiente di apprendimento sicuro 🛡️"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:32
+msgid "Meets data privacy requirements"
+msgstr "Soddisfa i requisiti sulla privacy dei dati"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:33
+msgid "Curated to be interest-based ❤️"
+msgstr "Curato in base agli interessi ❤️"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:39
+msgid ""
+"1 Bring equity into the classroom; curated learning anywhere, anytime with "
+"Endless Key"
+msgstr ""
+"1 Porta l'equità in classe; apprendimento curato ovunque, in qualsiasi momento con "
+"Endless Key"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:43
+msgid ""
+"2 Works online and offline; access learning resources for coding, STEM, "
+"cooking, and arts &amp; crafts!"
+msgstr ""
+"2 Funziona online e offline; accedi alle risorse di apprendimento per la codifica, STEM, "
+"cucina e arti &amp; mestieri!"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:47
+msgid ""
+"3 Resources such as finance, healthy body, TED Ed, sports, games, arts &amp; "
+"crafts, gardening, and more"
+msgstr ""
+"3 Risorse come finanza, cura del corpo, TED Ed, sport, giochi, arti e "
+"artigianato, giardinaggio e altro"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:51
+msgid ""
+"4 Engaging and interactive; discover an abundance of ready-made resources, "
+"games, simulations, etc"
+msgstr ""
+"4 Coinvolgente e interattivo; scopri un'abbondanza di risorse già pronte, "
+"giochi, simulazioni, ecc."
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:55
+msgid ""
+"5 Completely free; access without an account, safeguarded data, and no ads"
+msgstr ""
+"5 Completamente gratuito; accesso senza account, dati protetti e nessuna pubblicità"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:59
+msgid "6 Grades 5–9, 2700+ curated resources, 1500+ videos, 300+ e-books"
+msgstr "6 classi dalla 5a alla 9a, oltre 2700 risorse curate, oltre 1500 video, oltre 300 e-book"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:67
+msgid "Fix Spanish content pack download and fix font rendering."
+msgstr "Correzione del download del pacchetto di contenuti in spagnolo e correzione del rendering dei font."
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:74
+msgid "Have better Spanish translation."
+msgstr "Avere una traduzione in spagnolo migliore."
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:81
+msgid "The loading screen shown during startup has been improved."
+msgstr "È stata migliorata la schermata di caricamento visualizzata durante l'avvio."
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:82
+msgid "The content downloaded during first launch can now be selected."
+msgstr "Ora è possibile selezionare il contenuto scaricato al primo avvio."
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:83
+msgid "An initial Spanish translation has been added."
+msgstr "È stata aggiunta una traduzione iniziale in spagnolo."
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:90
+msgid "Fix screenshots' captions of application information"
+msgstr "Corretto le didascalie degli screenshot delle informazioni dell'applicazione"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:97
+msgid "Fix screenshots of application information"
+msgstr "Corretto gli screenshot delle informazioni dell'applicazione"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:104
+msgid "Fix application information"
+msgstr "Corretto le informazioni dell'applicazione"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:111
+msgid "Provide Endless Key onboarding experience"
+msgstr "Fornire un'esperienza di onboarding Endless Key"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:112
+msgid "Improve application information for users"
+msgstr "Migliorato le informazioni dell'applicazione per gli utenti"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:113
+msgid "Update underlying application"
+msgstr "Aggiorna l'applicazione sottostante"
+
+#: data/metainfo/org.endlessos.Key.metainfo.xml.in.in:119
+msgid "This is the initial release of Endless Key."
+msgstr "Questa è la versione iniziale di Endless Key."
+
+#: src/kolibri_gnome/application.py:101
+msgid "© 2023 Endless OS Foundation"
+msgstr "© 2023 Endless OS Foundation"
+
+#: src/kolibri_gnome/application.py:102
+#, python-brace-format
+msgid "{kolibri_version} ({app_version})"
+msgstr ""
+
+#: src/kolibri_gnome/application.py:112
+msgid "Community Forums"
+msgstr "Forum della comunità"
+
+#: src/kolibri_gnome/application.py:176
+msgid "Save File"
+msgstr "Salva file"
+
+#: src/kolibri_gnome/kolibri_window.py:301
+msgid "New Window"
+msgstr "NUova finestra"
+
+#: src/kolibri_gnome/kolibri_window.py:305
+msgid "Reload"
+msgstr "Ricarica"
+
+#: src/kolibri_gnome/kolibri_window.py:306
+msgid "Actual Size"
+msgstr "DImensione attuale"
+
+#: src/kolibri_gnome/kolibri_window.py:307
+msgid "Zoom In"
+msgstr "Zoom avanti"
+
+#: src/kolibri_gnome/kolibri_window.py:308
+msgid "Zoom Out"
+msgstr "Zoom inidietro"
+
+#: src/kolibri_gnome/kolibri_window.py:314
+msgid "Show Developer Tools"
+msgstr "Mostra Strumenti per sviluppatori"
+
+#: src/kolibri_gnome/kolibri_window.py:319
+msgid "Help"
+msgstr "Aiuto"
+
+#: src/kolibri_gnome/kolibri_window.py:320
+msgid "About Endless Key"
+msgstr "Informazioni su Endless Key"
